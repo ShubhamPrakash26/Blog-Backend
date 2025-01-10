@@ -1,35 +1,31 @@
-const Blog = require("../models/Blog");
-
+const Blog = require('../models/Blog');
 exports.createBlog = async (req, res) => {
   try {
     const { 
-      authorName, 
-      authorDepartment, 
-      blogImage, 
-      blogHeading, 
-      blogContent 
+      title,
+      content,
+      tags,
+      visibility 
     } = req.body;
 
     // Validation
-    if (!authorName || !authorDepartment || !blogHeading || !blogContent) {
+    if (!title || !content) {
       return res.status(400).json({ 
         message: "Please provide all required fields" 
       });
     }
 
     const newBlog = new Blog({
-      authorName,
-      authorDepartment,
-      blogImage,
-      blogHeading,
-      blogContent,
-      status: 'Pending', // All new blogs start as pending
-      dateOfPosting: new Date(),
-      publicReaction: {
-        likes: 0,
-        comments: [],
-        impressions: 0
-      }
+      authorId: req.user._id,
+      authorName: req.user.name,
+      authorDepartment: req.user.department,
+      authorRole: req.user.role,
+      title,
+      content,
+      tags: tags || [],
+      visibility: visibility || 'Internal',
+      status: 'Draft',
+      version: 1
     });
 
     await newBlog.save();
