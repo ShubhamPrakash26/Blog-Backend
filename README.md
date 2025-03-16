@@ -180,5 +180,5 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 
 ## 📞 Contact
 For any questions or feedback, feel free to contact:
-- **Email**: [prakashshubham26@gmail.com](mailto:prakashshubham26@gmail.com)
-- **GitHub**: [prakashshubham26](https://github.com/prakashshubham26)
+- **Email ID**: [prakashshubham26@gmail.com](mailto:prakashshubham26@gmail.com)
+- **GitHub URL**: [prakashshubham26](https://github.com/prakashshubham26)
