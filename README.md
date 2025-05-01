@@ -1,6 +1,6 @@
 # Blog Management System
 
-A comprehensive **Blog Management System** built using **Node.js**, **Express.js**, and **MongoDB**. This system provides a platform for users to manage blogs with features such as user authentication, role-based access control, CRUD operations for blog posts, commenting, and blog approval or rejection workflows.
+The **Blog Management System** is built using **Node.js**, **Express.js**, and **MongoDB**. This system provides a platform for users to manage blogs with features such as user authentication, role-based access control, CRUD operations for blog posts, commenting, and blog approval or rejection workflows.
 
 ---
 
