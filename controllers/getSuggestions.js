@@ -1,5 +1,3 @@
-const Blog = require("../models/Blog");
-
 exports.getSuggestions = async (req, res) => {
   const { blogId } = req.params;
   try {
@@ -7,8 +5,8 @@ exports.getSuggestions = async (req, res) => {
     if (!blog) {
       return res.status(404).json({ message: "Blog not found" });
     }
-    res.status(200).json(blog.comments);
+    res.status(200).json(blog.suggestions);  // Changed from blog.comments to blog.suggestions
   } catch (error) {
-    res.status(500).json({ message: "Error fetching suggestions", error });
+    res.status(500).json({ message: "Error fetching suggestions", error: error.message });
   }
 };
